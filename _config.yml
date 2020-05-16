@@ -1,1 +1,17 @@
-title: My Site
+# Theme settings
+doks:
+    google_analytics:
+        tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
+    comments:
+        disqus_forum_shortname: # Add your disqus forum shortname to activate comments
+
+# SASS settings
+sass:
+    sass_dir: ./theme/_sass
+    style: :compressed
+
+# Jekyll settings
+layouts_dir: ./theme/_layouts
+includes_dir: ./theme/_includes
+exclude: [ 'README.md', 'CHANGELOG.md' ]
+permalink: /:title/
