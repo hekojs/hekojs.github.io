@@ -1,0 +1,19 @@
+{
+  "name": "hekojs.github.io",
+  "version": "1.0.0",
+  "description": "Heko website",
+  "scripts": {
+    "jekyll": "jekyll serve",
+    "jsdoc": "node docs/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hekojs/hekojs.github.io.git"
+  },
+  "author": "Anaël Favre",
+  "license": "MIT",
+  "dependencies": {
+    "jekyll": "^3.0.0-beta1",
+    "jsdoc": "^3.6.4"
+  }
+}

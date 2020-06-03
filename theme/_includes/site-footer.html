@@ -1,33 +1,61 @@
-{% if site.doks.footer.content.logo.image or site.doks.footer.content.logo.text or site.doks.footer.content.copyright or site.doks.footer.social_list %}
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6">
-					<a href="/" class="site-footer__logo">HEKO</a>
-					<hr>
-					<p class="site-footer__copyright">
-						Copyright &copy; 2020 - <a href="https://github.com/SauceCodeFr">Anaël Favre</a> (<a href="https://sauce-code.fr/">Sauce Code</a>)
-						<br>All rights reserved.
-					</p>
-				</div>
-				<div class="col-sm-6 align-right">
-					<ul class="social-list">
-						<li>
-							<a href="https://github.com/hekojs/hekojs.github.io" target="_blank" class="social-list__item social-list__item--github">
-								<i class="icon icon--github"></i>
-							</a>
-						</li>
-					</ul><!-- /.social-list -->
-				</div><!-- /.col -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</footer><!-- /.site-footer -->
-{% endif %}
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/" class="site-footer__logo">HEKO</a>
+                <hr>
+                <p class="site-footer__copyright">
+                    Copyright &copy; 2020 - <a href="https://github.com/SauceCodeFr">Anaël Favre</a> (<a
+                        href="https://sauce-code.fr/">Sauce Code</a>)
+                    <br>All rights reserved.
+                </p>
+            </div>
+            <div class="col-sm-6 align-right">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://github.com/hekojs/hekojs.github.io" target="_blank"
+                           class="social-list__item social-list__item--github">
+                            <i class="icon icon--github"></i>
+                        </a>
+                    </li>
+                </ul><!-- /.social-list -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</footer><!-- /.site-footer -->
 
 <script src="/theme/assets/js/vendor/jquery.min.js"></script>
 <script type="text/javascript" src="/theme/assets/js/vendor/bootstrap/affix.min.js"></script>
 <script type="text/javascript" src="/theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
 <script type="text/javascript" src="/theme/assets/js/vendor/matchHeight.min.js"></script>
 <script type="text/javascript" src="/theme/assets/js/scripts.min.js"></script>
+
+<style type="text/css">
+	#example-code pre.highlight { margin-bottom: 0; }
+	.platform-element, .player-element { color: #ffffff !important; border-bottom: 1px #ffffff dotted; cursor: pointer; }
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#example-code').find('span:contains(Platform)').addClass('platform-element');
+    $('#example-code').find('span:contains(Player)').addClass('player-element');
+
+  	$('.platform-element').hover(function() {
+  		$('#platform-code').show();
+	}, function() {
+		$('#platform-code').hide();
+	})
+  	$('.player-element').hover(function() {
+  		$('#player-code').show();
+	}, function() {
+		$('#player-code').hide();
+	})
+
+    window.addEventListener('keydown', function(e) {
+      if(e.keyCode == 32 && e.target == document.body) {
+        e.preventDefault();
+      }
+    });
+  })
+</script>
 
 {% include google-analytics.html %}

@@ -18,7 +18,7 @@ Thumbs.db
 # ---------------
 # Compiled assets
 # ---------------
-scripts
+doc/temp
 .jekyll-cache
 .sass-cache
 _site

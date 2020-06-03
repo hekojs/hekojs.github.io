@@ -6,11 +6,13 @@ doks:
         disqus_forum_shortname: # Add your disqus forum shortname to activate comments
     header:
         nav:
-            - item_name: Item 1
+            - item_name: Examples
               item_url: '#'
-            - item_name: Item 2
+            - item_name: Tutoriels
               item_url: '#'
-            - item_name: Item 3
+            - item_name: Documentation
+              item_url: '#'
+            - item_name: GitHub
               item_url: '#'
 
 # SASS settings

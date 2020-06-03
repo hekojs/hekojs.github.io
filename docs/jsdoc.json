@@ -1,0 +1,6 @@
+{
+  "opts": {
+    "destination": ".",
+    "recurse": true
+  }
+}
